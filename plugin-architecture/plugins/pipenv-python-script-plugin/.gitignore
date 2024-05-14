@@ -1,0 +1,4 @@
+lib/src_Main.dylib
+lib/src_Main.o
+lib/src_Main.so
+pipenv-python-script-plugin.jar
