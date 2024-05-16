@@ -7,12 +7,12 @@ import java.util.Map;
 
 public class PluginManager {
     Map<String, Class<?>> plugins = new HashMap<>();
-    void loadPlugin(String pluginName, String filePath) {
+    void loadPlugin(String pluginName, String pluginClassPath, String filePath) {
         try {
             File file = new File(filePath);
             URLClassLoader classLoader = new URLClassLoader(new URL[]{file.toURI().toURL()});
 
-            plugins.put(pluginName, classLoader.loadClass("src.Main"));
+            plugins.put(pluginName, classLoader.loadClass(pluginClassPath));
         } catch (Exception e) {
             System.out.println("Error : " + e);
         }

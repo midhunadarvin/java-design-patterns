@@ -1,7 +1,9 @@
 build-mac:
 	gcc -c -fPIC -I"${JAVA_HOME}/include" -I"${JAVA_HOME}/include/darwin" -I"." -o src_Main.o src_Main.c
 	gcc -dynamiclib -o libpipenv-python-script-jni-plugin.dylib src_Main.o -lc
-	mv libpipenv-python-script-jni-plugin.dylib ../../../integration-toolkit-core/libs
+	rm -rf ../../../integration-toolkit-core/libs
+	mkdir ../../../integration-toolkit-core/libs
+	mv libpipenv-python-script-jni-plugin.dylib ../../../integration-toolkit-core/libs/libpipenv-python-script-jni-plugin.dylib
 
 build-linux:
 	gcc -c -fPIC -I"${JAVA_HOME}/include" -I"${JAVA_HOME}/include/linux" -I"." -o src_Main.o src_Main.c

@@ -1,5 +1,9 @@
 # Java Plugin Architecture 
 
+### PreRequisite 
+
+Install pipenv : https://pypi.org/project/pipenv/#installation
+
 ### Build
 
 ```
