@@ -5,3 +5,5 @@
 out
 plugin-architecture/integration-toolkit-core/libs
 plugin-architecture/plugins/**/*.jar
+.venv
+target
