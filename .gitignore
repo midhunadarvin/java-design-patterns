@@ -3,3 +3,5 @@
 .DS_Store
 .idea
 out
+plugin-architecture/integration-toolkit-core/libs
+plugin-architecture/plugins/**/*.jar
