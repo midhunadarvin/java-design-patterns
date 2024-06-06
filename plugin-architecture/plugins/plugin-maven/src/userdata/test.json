@@ -1,0 +1,6 @@
+{
+  "user": {
+    "type": "string",
+    "value": "John Doe"
+  }
+}
