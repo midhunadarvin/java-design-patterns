@@ -1,14 +1,9 @@
 package com.chistadata.plugins;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
 
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.HashMap;
-import java.util.Map;
-
+/**
+ * Hello world!
+ *
+ */
 public class Main
 {
     public boolean PreExecute() {
@@ -16,18 +11,8 @@ public class Main
         return true;
     }
 
-    public boolean Execute() throws IOException, TemplateException {
-        String templateRoot = "/Users/vishal/source/java-design-patterns/plugin-architecture/plugins/plugin-maven/src/templates";
-
-        Configuration cfg = TemplateEngine.init(templateRoot);
-
-        Map<String, Object> dm = new HashMap<>();
-        dm.put("user","John Doe");
-
-        Template temp = cfg.getTemplate("test.ftlh");
-
-        Writer out = new OutputStreamWriter(System.out);
-        temp.process(dm, out);
+    public boolean Execute() {
+        System.out.println("Execute: plugin maven");
         return true;
     }
 
